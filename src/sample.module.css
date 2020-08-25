@@ -1,0 +1,28 @@
+.sample {
+    background: green;
+}
+
+
+.grid {
+    margin-top: 10vh;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.cell {
+    height: 5vh;
+    width: 5vw;
+    border: 1px solid blue;
+    display: grid;
+    place-items: center;
+    transition: background-color 1s ease;
+}
+
+.xCell {
+    background: blue;
+}
+
+.oCell {
+    background: red;
+}
