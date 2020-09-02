@@ -1,4 +1,4 @@
-'use strict';
+
 
 const path = require('path');
 const fs = require('fs');
@@ -50,21 +50,21 @@ const resolveModule = (resolveFn, filePath) => {
 
 // config after eject: we're in ./config/
 module.exports = {
-  dotenv: resolveApp('.env'),
-  appPath: resolveApp('.'),
   appBuild: resolveApp('build'),
-  appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveModule(resolveApp, 'src/index'),
+  appIndexJs: resolveModule(resolveApp, 'src/app/index'),
+  appJsConfig: resolveApp('jsconfig.json'),
+  appNodeModules: resolveApp('node_modules'),
   appPackageJson: resolveApp('package.json'),
+  appPath: resolveApp('.'),
+  appPublic: resolveApp('public'),
   appSrc: resolveApp('src'),
   appTsConfig: resolveApp('tsconfig.json'),
-  appJsConfig: resolveApp('jsconfig.json'),
-  yarnLockFile: resolveApp('yarn.lock'),
-  testsSetup: resolveModule(resolveApp, 'src/setupTests'),
+  dotenv: resolveApp('.env'),
   proxySetup: resolveApp('src/setupProxy.js'),
-  appNodeModules: resolveApp('node_modules'),
   publicUrlOrPath,
+  testsSetup: resolveModule(resolveApp, 'src/setupTests'),
+  yarnLockFile: resolveApp('yarn.lock'),
 };
 
 

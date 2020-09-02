@@ -9,8 +9,6 @@ function App() {
 
   const [state, dispatch] = useReducer(ticTacToeReducer,defaultState )
 
-  console.log('state', state)
-
   return (
     <div className="App">
       {state.solved && `SOLVED BY TEAM ${state.solved}`}
